@@ -83,11 +83,17 @@
 # Спросите у пользователя, скольких людей он хочет пригласить на вечеринку.
 # Если будет введено число меньше 10, запросите имена и после каждого имени выведите строку «[имя] has been invited».
 # Если введенное число больше или равно 10, выведите сообщение «Too many people».
-num = int(input("How many friends do you want to invite to the party? "))
-if num < 10:
-    for i in range(0, num):
-        name = input("Enter a name: ")
-        print(name, " has been invited")
-else:
-    print("Too many people")
+# num = int(input("How many friends do you want to invite to the party? "))
+# if num < 10:
+#     for i in range(0, num):
+#         name = input("Enter a name: ")
+#         print(name, " has been invited")
+# else:
+#     print("Too many people")
+
+count = 10
+for i in range(count):
+    for j in range(count):
+        for k in range(count):
+            print(i,j,k)
 

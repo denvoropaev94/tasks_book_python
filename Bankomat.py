@@ -54,15 +54,16 @@ while True:
             print("Внесенная сумма = ", depos)
             count += 1
             print("Количество операций : ", count)
+            if depos >= 5_000_000:
+                print("Нужно заплатить налог на богатсво!!!")
+                depos -= depos * 1.1
+                print("C вас вычтут - ", round(depos))
+                y.deposit(amount=depos)
             if count % 3 == 0:
                 print("Налог на 3 подряд операции", abs(depos * 0.03))
                 depos -= depos * 1.03
                 y.deposit(amount=depos)
-            elif depos >= 5_000_000:
-                print("Нужно заплатить налог на богатсво!!!")
-                depos -= depos * 1.1
-                print("C вас вычтут - ",depos)
-                y.deposit(amount=depos)
+
         else:
             print("Ошибка! Можно вносить только сумму кратную 50")
     elif number == 3:
@@ -73,6 +74,11 @@ while True:
             count += 1
             print("Количество операций : ", count)
             with_comission = vivod * 1.015
+            if vivod >= 5_000_000:
+                print("Нужно заплатить налог на богатсво!!!")
+                vivod = vivod * 1.1
+                print("C вас вычтут - ", round(vivod))
+                # y.cash_withdrawal(amount=vivod)
             if count % 3 == 0:
                 print("Налог на 3 подряд операции", abs(vivod * 0.03))
                 vivod = vivod * 1.03

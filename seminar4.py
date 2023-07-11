@@ -69,16 +69,16 @@
 # Вернуть словарь с именем в качестве ключа и суммой премии в качестве значения.
 # Сумма рассчитывается как ставка умноженная на процент премии.
 #
-# def summa_with_premiya(str_list: list[str], int_list: list[int], str2_list: list[str]):
-#     dictionary_peoples = {}
-#     for index, name in enumerate(str_list):
-#         dictionary_peoples[name] = int_list[index] * (float(str2_list[index][0:-1]) + 100) / 100
-#     return dictionary_peoples
-#
-# names = ['Den', 'Nik', 'Oleg', 'Sasha', 'Gleb']
-# stavka = [10000, 5000, 5000, 1000, 100]
-# procent = ["20.25%", "10.25%", "10.25%", "1.25%", "5.25%"]
-# print(summa_with_premiya(names, stavka, procent))
+def summa_with_premiya(str_list: list[str], int_list: list[int], str2_list: list[str]):
+    dictionary_peoples = {}
+    for index, name in enumerate(str_list):
+        dictionary_peoples[name] = int_list[index] * (float(str2_list[index][0:-1]) + 100) / 100
+    return dictionary_peoples
+
+names = ['Den', 'Nik', 'Oleg', 'Sasha', 'Gleb']
+stavka = [100000, 5000, 5000, 1000, 100]
+procent = ["20.25%", "10.25%", "10.25%", "1.25%", "5.25%"]
+print(summa_with_premiya(names, stavka, procent))
 
 
 # ----------------------------------------------------

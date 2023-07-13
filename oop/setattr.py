@@ -18,3 +18,5 @@ A.value = 3213231
 print(A.value)
 A.__dict__["number"] = "Python"
 print(A.number)
+A.__dict__["number"] = "Java"
+print(A.number)

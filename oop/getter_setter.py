@@ -20,10 +20,15 @@ class User:
         else:
             raise ValueError(f'Новый возраст должен быть больше текущего: {self._age}')
 
+    @age.deleter
+    def age(self):
+        self._age = 0
 
 user = User('Den', 'Voropaev')
 user.age = 28
 print(f'My name {user.full_name} and me {user.age} years')
 print('one year last')
 user.age = 29
+print(f'My name {user.full_name} and me {user.age} years')
+del user.age
 print(f'My name {user.full_name} and me {user.age} years')
